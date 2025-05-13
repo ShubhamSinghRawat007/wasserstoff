@@ -35,4 +35,20 @@ Displays:
 - Success message
 
 
+## ✨ Features
 
+- Fully **typed components** using TypeScript
+- **DRY and reusable** design (all components are modular)
+- Maximum **200 lines per component**
+- No external component libraries
+
+  ## 🛠 Getting Started
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/ShubhamSinghRawat007/wasserstoff.git
+cd FrontEndInternTask
+npm install
+npm run dev
+Visit http://localhost:5000 

@@ -1,0 +1,176 @@
+
+/* InputField.css */
+.input-field {
+    margin-bottom: 1.5rem;
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  .input-wrapper input {
+    color: rgb(58, 57, 57);
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .input-field input {
+    width: 85%;
+    padding: 1rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1rem;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .input-field input.with-icon {
+    padding-left: 48px;
+  }
+  
+  .floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 1rem;
+    top: 1rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #64748b;
+    font-size: 1rem;
+    z-index: 0;
+  }
+  .left-space{
+    left: 2.5rem;
+  }
+  
+  /* Input variants */
+  .input-field--outlined input {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+  }
+  
+  .input-field--outlined.is-focused input {
+    border-color: #6366f1;
+  }
+  
+  .input-field--filled input {
+    border-width: 0 0 2px 0;
+    border-color: #e2e8f0;
+    border-radius: 8px 8px 0 0;
+    background-color: #f8fafc;
+    padding-bottom: 0.5rem;
+  }
+  
+  .input-field--filled.is-focused input {
+    border-color: #6366f1;
+    background-color: #f1f5f9;
+  }
+  
+  .input-field--minimal input {
+    border-width: 0 0 2px 0;
+    border-color: #e2e8f0;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .input-field--minimal.is-focused input {
+    border-color: #6366f1;
+  }
+  
+  /* Status styles */
+  .input-field.status--error input {
+    border-color: #ef4444;
+  }
+  
+  .input-field.status--success input {
+    border-color: #22c55e;
+  }
+  
+  .input-field.status--error .floating-label,
+  .input-field.status--error .helper-text {
+    color: #ef4444;
+  }
+  
+  .input-field.status--success .floating-label,
+  .input-field.status--success .helper-text {
+    color: #22c55e;
+  }
+  
+  /* Focus & value states */
+  .input-field.is-focused .floating-label,
+  .input-field.has-value .floating-label {
+    top: 0rem;
+    left: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0 0.25rem;
+  }
+  
+  .input-field--outlined.is-focused .floating-label,
+  .input-field--outlined.has-value .floating-label {
+    background-color: white;
+  }
+  
+  .input-field.is-focused .floating-label {
+    color: #6366f1;
+  }
+  
+  .input-field input:focus {
+    outline: none;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+  }
+  
+  .helper-text {
+    margin-top: 0.35rem;
+    font-size: 0.75rem;
+    color: #64748b;
+    padding-left: 0.75rem;
+  }
+  
+  /* For dark mode support - add these classes to your app's dark mode styles */
+  /*
+  .dark .input-field--outlined input {
+    border-color: #475569;
+  }
+  
+  .dark .input-field--filled input {
+    background-color: #334155;
+    border-color: #475569;
+  }
+  
+  .dark .input-field--filled.is-focused input {
+    background-color: #1e293b;
+  }
+  
+  .dark .floating-label {
+    color: #94a3b8;
+  }
+  
+  .dark .input-field--outlined.is-focused .floating-label,
+  .dark .input-field--outlined.has-value .floating-label {
+    background-color: #0f172a;
+  }
+  */
+  
+  /* Animation effect for focus */
+  .input-field.is-focused input {
+    transform: translateY(-2px);
+  }
